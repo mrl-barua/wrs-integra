@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
     res.send('Hello from Express.js!');
 });
 
+app.get('/about', (req, res) => {
+    res.send('About us');
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
