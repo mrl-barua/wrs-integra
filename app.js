@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
         if (err) {
             throw err;
         }
+        if (results.length === 0) {
+            // res.send('No users found');
+            console.log('No users found');
+            return;
+        }
         console.log(results);
         res.send('Check console for results');
     });
